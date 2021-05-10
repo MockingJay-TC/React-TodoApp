@@ -1,5 +1,5 @@
 body {
-  font-family: Poppins;
+  font-family: Bitter;
   background: #e7eded;
 }
 .todo {
@@ -12,6 +12,8 @@ body {
 
 .todo h2 {
   font-weight: 400;
+  color: #008aff;
+  font-size: 2rem;
 }
 
 .todo .todo-body {
@@ -25,11 +27,12 @@ body {
   background: #f6fafa;
   border-radius: 10px;
   padding: 5px 15px;
+  font-size: 1rem;
 }
 
 .todo-list h3 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.5em;
 }
 
 
@@ -54,7 +57,18 @@ body {
   right: 10px;
   color: tomato;
   cursor: pointer;
+  padding:10px;
+  /* border: 1px solid blue; */
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
 }
+
+/* 
+.todo-item i:hover{
+  color: #008aff;
+} */
 
 .todo-item .content {
   color: #807f7f;
@@ -67,9 +81,18 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #333;
+  border: 2px solid tomato;
   text-align: center;
   font-size: 1.2rem;
   line-height: 34px;
-  color: tomato;
+  background: tomato;
+  color: #FFF;
+  cursor: pointer;
+  transition: .6s ease-in-out;
+}
+.user p:hover{
+  border: 2px solid #008aff;
+  cursor: pointer;
+  background-color: #008aff;
+  transition: .6s ease-in-out;
 }

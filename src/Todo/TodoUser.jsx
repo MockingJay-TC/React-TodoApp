@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TodoUser extends Component {
-    state = {  }
-    render() { 
+const TodoUser =(props) => {
+    
         return ( 
             <div className="user">
-                <p>VA</p>
+                <p>{props.initials}</p>
             </div>
          );
     }
-}
- 
+
 export default TodoUser;

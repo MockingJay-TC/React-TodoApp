@@ -49,6 +49,27 @@ class Todo extends Component {
                 tiDesc: "This is a setup description",
                 tlId: "TL03"
             }
+        ],
+        TodoUsers: [
+            {
+                tuId: "TU01",
+                tufName: "Victor",
+                tulName: "Aremu",
+                tiId: "TI01"
+            },
+            {
+                tuId: "TU02",
+                tufName: "Agbesi",
+                tulName: "Amenyo",
+                tiId: "TI01"
+            },
+            {
+            
+                tuId: "TU03",
+                tufName: "Agbesi",
+                tulName: "Amenyo",
+                tiId: "TI03"
+            }
         ]
         
     };
@@ -57,9 +78,9 @@ class Todo extends Component {
         let val = key.currentTarget.previousElementSibling.innerText;
         let removeTodoItem;
         
-        this.state.TodoItems.map((tl, index)=>{
-            if(tl.tiName === val){
-                removeTodoItem = tl;
+        this.state.TodoItems.map(di=>{
+            if(di.tiName === val){
+                removeTodoItem = di;
                 return removeTodoItem;
             }
             return {
@@ -67,12 +88,14 @@ class Todo extends Component {
                 }
             
         });
-        console.log(removeTodoItem);
+        // console.log(removeTodoItem);
 
     
     let array = this.state.TodoItems.filter((item) =>{
-        return item.tiId !==removeTodoItem.tiId;
+        return item.tiId !== removeTodoItem.tiId;
+    
     });
+    console.log(array);
 
     this.setState({
         TodoItems: array

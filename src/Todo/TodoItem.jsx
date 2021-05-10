@@ -12,7 +12,7 @@ const TodoItem = (props) => {
             <div className="content">
                 {props.children}
             </div>
-            <TodoUser />
+            <TodoUser initials ="VA"/>
         </div>
     )
 }
