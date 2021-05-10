@@ -54,8 +54,30 @@ class Todo extends Component {
     };
 
     deleteTodoItemHandler = (key) => {
-        console.log(key)
-    }
+        let val = key.currentTarget.previousElementSibling.innerText;
+        let removeTodoItem;
+        
+        this.state.TodoItems.map((tl, index)=>{
+            if(tl.tiName === val){
+                removeTodoItem = tl;
+                return removeTodoItem;
+            }
+            return {
+                
+                }
+            
+        });
+        console.log(removeTodoItem);
+
+    
+    let array = this.state.TodoItems.filter((item) =>{
+        return item.tiId !==removeTodoItem.tiId;
+    });
+
+    this.setState({
+        TodoItems: array
+    })
+}
 
     
 
@@ -79,7 +101,7 @@ class Todo extends Component {
                                 return <TodoItem
                                 key={this.TodoItems.tiId}
                                 tiName={this.TodoItems.tiName}
-                                deleteItem={() => this.deleteTodoItemHandler(this.TodoItems.tiId)}>
+                                deleteItem={(e) => this.deleteTodoItemHandler(e)}>
                                     <p>{this.TodoItems.tiDesc}</p>
                                 </TodoItem>
                             })}
